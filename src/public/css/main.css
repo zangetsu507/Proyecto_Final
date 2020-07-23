@@ -87,7 +87,11 @@ footer{
 }
 
 .nav{
-margin-right:-800px;
+margin-right:-1000px;
+margin-top:-20px;
+margin-bottom:-25px;
+text-decoration: none;
+color:#68391A
 }
 
 .navf{
@@ -113,4 +117,38 @@ h4{
 
 h5{
   font-family: 'Rowdies', cursive;
+}
+
+div{
+  font-family: 'Rowdies', cursive;
+}
+
+.dropdown button{
+  border-style:none;
+  margin:5px;
+  border-radius:60px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color:#68391A
+}
+.dropdown div a{
+  display:block;
+  text-decoration: none;
+  color:#68391A
+}
+
+.dropdown div a:hover{
+  display:block;
+  text-decoration: none;
+  color:#68391A
+}
+
+.dropdown div{
+  visibility: hidden;
+  text-decoration: none;
+  color:#68391A;
+}
+
+.dropdown:hover div{
+  visibility: visible;
 }
