@@ -1,0 +1,39 @@
+.menu{
+    width:220px;
+    height:220px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    padding-top: -20px;
+}
+
+.separadorm{
+    text-align: center;
+    margin:25px;
+}
+
+.cm{
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 20px;
+    padding-top: 5px;
+}
+
+.yc{
+    width:120px;
+    height:2px;
+    border-radius: 60px;
+    margin-top: -40px;
+}
+
+.des{
+    margin-top: -20px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.container-fluid{
+    padding-left: 170px;
+    padding-right: 170px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}

@@ -1,0 +1,116 @@
+.logo{
+  display: flex;
+  justify-content: center;
+}
+
+.col-md-12{
+  display: flex;
+  justify-content: center;
+}
+
+.navbar{
+  width:150px;
+  border-radius: 60px;
+  justify-content: center;
+  background:white;
+  border-style: none;
+  float: left;
+  margin:30px;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color:#68391A;
+  text-decoration: none;
+  margin:10px;
+  font-family: 'Rowdies', cursive;
+}
+
+.navbar:hover{
+  background-color:#FFD700;
+  filter:alpha (opacity=50);
+  text-decoration: none;
+  color:#68391A;
+}
+
+.container{
+  padding-bottom: 21px;
+}
+
+.nueces{
+  margin-left: auto;
+  margin-right: auto;
+  max-width:900px;
+  height:500px;
+  border-style: solid;
+  border-color: white;
+  border-width:5px;
+  transition: all 0.5s ease;
+}
+
+.nueces:hover{
+  transform:scale(1.02);
+  opacity: 0.5;
+}
+.tres:hover{
+  transform:scale(1.02);
+  opacity: 0.5;
+}
+
+
+.bottom{
+  padding-top: 5px;
+  padding-bottom: 30px;
+}
+
+.tres{
+
+  width:220px;
+  height:220px;
+  border-style: solid;
+  border-color: white;
+  border-width:5px;
+  margin-top: 5px;
+  margin-left: 15px;
+  margin-right: 15px;
+  transition: all 0.5s ease;
+}
+
+footer{
+  background-color: white;
+  padding-top: 10px;
+}
+.footer{
+  width:30px;
+  height:30px;
+  margin: 20px;
+}
+
+.nav{
+margin-right:-800px;
+}
+
+.navf{
+  color:#68391A;
+}
+
+.navf:hover{
+  text-decoration: none;
+  color:#68391A;
+}
+
+h3 {
+  font-family: 'Rowdies', cursive;
+}
+
+p{
+  font-family: 'Rowdies', cursive;
+}
+
+h4{
+  font-family: 'Rowdies', cursive;
+}
+
+h5{
+  font-family: 'Rowdies', cursive;
+}

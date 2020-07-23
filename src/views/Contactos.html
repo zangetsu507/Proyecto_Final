@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <%- include ('navegador/head.html') %>
+</head>
+
+<body style="background-color:#E7879A;">
+    <%- include ('navegador/nav.html') %>
+    <div class="container-fluid">
+        <div class="cm">
+
+            <div class="row">
+                <div class="logotipo">
+                    <div class="col-md-6">
+                        <img class="logoc" src="/img/candy_corner.jpg" width=300 height=300 />
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="contactos">
+                        <h3 class="text-center">Contacta con nosotros</h3>
+                        <p class="text-center">Parque Lefevre, Calle 85B Este<br>
+                            candycurnerinfo@gmail.com // 6826-0196 // 237-0349<br>
+                            Nos gustaria escuchar tus opiniones:
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nombre</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">E-mail</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Telefono</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" />
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Descripción</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" />
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include ('navegador/footer.html') %>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+.cs{
+    font-family: 'Rowdies', cursive;
+    color:#E7879A
+}
+
+.cs:hover{
+    text-decoration: none;
+    color:#E7879A
+}
+
+.is{
+    text-align: center;
+        width:150px;
+        border-radius: 60px;
+        justify-content: center;
+        background:#E7879A;
+        border-style: none;
+        float: left;
+        margin:30px;
+        padding-bottom: 10px;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        color:white;
+        text-decoration: none;
+        margin:10px;
+        font-family: 'Rowdies', cursive;
+}
+
+.is:hover{
+    filter:alpha (opacity=50);
+    text-decoration: none;
+    color:white;
+  }
+
+  .encabezado{
+    margin-top: 20px;
+     padding-left: -100px;
+  }
+
+  .encabezado2{
+    padding-left: 40px;
+    padding-bottom: 20px;
+ }
+
+ .formulario{
+     margin-left: 320px;
+     margin-bottom: 30px;
+ }
+
+ .btni{
+     padding-left: 60px;
+ }

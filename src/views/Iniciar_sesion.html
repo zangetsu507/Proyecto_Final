@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=title%></title>
+    <%- include ('navegador/head.html') %>
+</head>
+
+<body style="background-color:#E7879A;">
+    <%- include ('navegador/nav.html') %>
+    <div class="container-fluid">
+        <div class="cm">
+
+            <div class="row">
+                <div class="encabezado">
+                    <div class="col-md-12">
+                        <a class="cs" href="/Home">Inicio </a><p>/ Cuenta</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="encabezado2">
+                <div class="col-md-12">
+                    <h4>Iniciar Sesion</h4>
+                </div>
+            </div>
+            </div>
+
+            <div class="row">
+                <div class="formulario">
+                <div class="col-md-12">
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Correo Electronico:</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" />
+                        </div>
+                        <div class="form-group">
+
+                            <label for="exampleInputPassword1">Contraseña</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        
+            <div class="row">
+                    <div class="col-md-6">
+                        <h5>¿Eres nuevo?<a class="cs" href="/Crear_cuenta"> Registrarse</a></h5>
+                    </div>
+
+                <div class="btni">
+                    <div class="col-md-6">
+                        <a class="is" href="/home">Iniciar Sesión</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include ('navegador/footer.html') %>
+</body>
+
+</html>
