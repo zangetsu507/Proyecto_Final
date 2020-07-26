@@ -16,10 +16,16 @@
 }
 
 .contactos{
-    margin-left: 100px;
+    margin-left: 200px;
+    margin-right: -250px;
+    margin-bottom: 30px;
     padding-top: 10px;
 }
 
 .form{
     margin:-5px;
+}
+
+.contactos button{
+    margin-left: 160px;
 }

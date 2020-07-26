@@ -1,0 +1,11 @@
+.mno{
+    margin: 0px;
+}
+
+.btno{
+    width: 200px;
+    height: 40px;
+    color:white;
+    background:#68391A; ;
+    border-style: none;
+}

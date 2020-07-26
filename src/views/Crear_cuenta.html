@@ -29,48 +29,30 @@
                     </div>
                 </div>
             </div>
-
-            <% if(message.length > 0{%>
-            <div class="alter alter-danger">
-                <%= message%>
-            </div>
-            <%}%>
-
             <div class="row">
                 <div class="formulario">
+                    <% if (signupMessage.length > 0) {%>
+                        <div class="alert alert-danger"><%= signupMessage %>
+                        </div>
+                    <% } %>
                     <div class="col-md-12">
-                        <form action="/Crear_cuenta" method="post">
-                            <div class="form-group">
-                                <label for="nombre">Nombre:</label>
-                                <input type="nombre" name="nombre" class="form-control" />
-                            </div>
-                            <div class="form-group">
-                                <label for="apellido">Apellido:</label>
-                                <input type="email" name="apellido" class="form-control" />
-                            </div>
-                            <div class="form-group">
+                        <form action="/Crear_cuenta" method="POST">
+
                                 <label for="email">Correo Electronico:</label>
-                                <input type="email" name="email" class="form-control" />
-                            </div>
-                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="Correo Electronico"/>
+                                <br>
                                 <label for="password">Contraseña:</label>
-                                <input type="password" name="password" class="form-control" />
-                            </div>
+                                <input type="password" name="password" class="form-control"placeholder="Contraseña"/>
+                                
+                                <button class="is" type="submit">Registrarse</button>
                         </form>
                     </div>
+                    </div>
                 </div>
-            </div>
-
 
             <div class="row">
                 <div class="col-md-6">
                     <h5>¿Ya tienes cuenta?<a class="cs" href="/Iniciar_sesion">Iniciar Sesión</a></h5>
-                </div>
-
-                <div class="btni">
-                    <div class="col-md-6">
-                        <imput class="is" type="submit">Enviar</imput>
-                    </div>
                 </div>
             </div>
         </div>

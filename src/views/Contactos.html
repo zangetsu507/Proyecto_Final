@@ -12,14 +12,7 @@
     <%- include ('navegador/nav.html') %>
     <div class="container-fluid">
         <div class="cm">
-
             <div class="row">
-                <div class="logotipo">
-                    <div class="col-md-6">
-                        <img class="logoc" src="/img/candy_corner.jpg" width=300 height=300 />
-                    </div>
-                </div>
-
                 <div class="col-md-6">
                     <div class="contactos">
                         <h3 class="text-center">Contacta con nosotros</h3>
@@ -27,25 +20,25 @@
                             candycurnerinfo@gmail.com // 6826-0196 // 237-0349<br>
                             Nos gustaria escuchar tus opiniones:
                         </p>
-                        <form role="form">
+                        <form action="/Contactos" method="POST">
                             <div class="form-group">
-                                <label for="exampleInputEmail1">Nombre</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" />
+                                <label for="nombre_us">Nombre</label>
+                                <input type="text" name="nombre_us" class="form-control" placeholder="Ingrese su nombre"/>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">E-mail</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" />
+                                <label for="email_us">Email</label>
+                                <input type="text" name="email_us" class="form-control" placeholder="Ingrese su email"/>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Telefono</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" />
+                                <label for="telefono_us">Telefono</label>
+                                <input type="text" name="telefono_us" class="form-control" placeholder="Ingrese su telefono"/>
                             </div>
                             <div class="form-group">
-                                <label for="exampleInputPassword1">Descripción</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" />
+                                <label for="descripcion_us">Descripción</label>
+                                <input type="text" name="descripcion_us" class="form-control" placeholder="Ingrese su descripción" />
                             </div>
-                            <button type="submit" class="btn btn-primary">
-                                Submit
+                            <button type="submit" class="is">
+                                ENVIAR 
                             </button>
                         </form>
                     </div>

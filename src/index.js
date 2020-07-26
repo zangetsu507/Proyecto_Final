@@ -1,23 +1,16 @@
 const express = require('express');
-const app = express();
-
 const path = require('path');
-const mongoose = require('mongoose');
-const passport = require('passport');
-const flash = require('connect-flash');
 const morgan = require('morgan');
-const cookieParser = require('cookie-parser');
-const bodyParser= require('body-parser');
+const passport = require('passport');
 const session = require('express-session');
+const flash = require('connect-flash');
+const bodyParser = require('body-parser');
+const multer = require('multer');
 
-const {url} = require('./config/database');
-
-mongoose.connect(url,{
-    useNewUrlParser:true,
-    useUnifiedTopology:true
-});
-
-//require('./config/passport')(passport);
+//Inicializaciones
+const app = express();
+require('./database');
+require('./passport/local-auth');
 
 //Configuraciones
 app.set('port',3030);
@@ -26,23 +19,31 @@ app.engine('html',require('ejs').renderFile);
 app.set('view engine', 'ejs');
 
 //Middlewares
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(morgan('dev'));
-app.use(cookieParser());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: false}));
 app.use(session({
-    secret: 'candy curner',
+    secret:'noseametido',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized:false
 }));
+app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(flash());
+
+app.use((req, res, next) => {
+    app.locals.signupMessage = req.flash('signupMessage');
+    app.locals.signinMessage = req.flash('signinMessage');
+    app.locals.user = req.user;
+    next();
+});
 
 //Archivos estaticos
 app.use(express.static(path.join(__dirname,'public')));
 
 //rutas
-require('./app/index')(app,passport);
+app.use(require('./rutas/index'));
 
 
 // Escuhando el servidor

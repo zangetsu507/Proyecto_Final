@@ -1,3 +1,9 @@
+.logomain div{
+  margin-left: 230px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .logo{
   display: flex;
   justify-content: center;
@@ -33,7 +39,7 @@
   color:#68391A;
 }
 
-.container{
+.container div {
   padding-bottom: 21px;
 }
 
@@ -87,11 +93,10 @@ footer{
 }
 
 .nav{
-margin-right:-1000px;
-margin-top:-20px;
-margin-bottom:-25px;
-text-decoration: none;
-color:#68391A
+  margin-top: 10px;
+  margin-left: 450px;
+  text-decoration: none;
+  color:#68391A
 }
 
 .navf{
@@ -105,6 +110,7 @@ color:#68391A
 
 h3 {
   font-family: 'Rowdies', cursive;
+  color:#68391A;
 }
 
 p{
