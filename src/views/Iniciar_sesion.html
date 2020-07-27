@@ -37,11 +37,9 @@
                     <% } %></p>
                 <div class="col-md-12">
                     <form action="/Iniciar_sesion" method="post">
-                        <div class="form-group">
                             <label for="email">Correo Electronico:</label>
                             <input type="email" name="email" class="form-control" placeholder="Correo Electronico"/>
-                        </div>
-                        <div class="form-group">
+                            <br>
                             <label for="password">Contraseña</label>
                             <input type="password" name="password" class="form-control" placeholder="Correo Electronico"/>
 
@@ -50,9 +48,6 @@
                     </form>
                 </div>
             </div>
-        </div>
-
-        
             <div class="row">
                     <div class="col-md-6">
                         <h5>¿Eres nuevo?<a class="cs" href="/Crear_cuenta"> Registrarse</a></h5>
@@ -60,6 +55,8 @@
             </div>
         </div>
     </div>
+</div>
+    
     <%- include ('navegador/footer.html') %>
 </body>
 

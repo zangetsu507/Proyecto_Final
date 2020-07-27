@@ -6,6 +6,8 @@ const Contactos = require('../models/contactos');
 const Product = require('../models/productos');
 
 
+const stripe = require('stripe')('sk_test_51H9Le7KaGC0LxOgTl3IWK99MuaXjYFWaWQ64eEjsvU6QHjuHz7tWpeDx6QYm5y10FG7JdODnGGEu3jpC7VcKelF900lGKKJ06R');
+
 app.get('/Contactos', (req, res) => {
     res.render('Contactos.html', {title:"Contactos"});
 });
@@ -19,9 +21,7 @@ app.get('/Menu', (req, res) => {
 });
 
 app.get('/Ordenar_Online', isAuthenticated,async (req, res) => {
-    const products = await Product.find();
-    
-    res.render('Ordenar_Online.html', {products : products,title:"Ordenar Online"});
+    res.redirect('./Iniciar_Sesion', {title:"Ordenar Online"});
 });
 
 app.get('/Sucursales', (req, res) => {
@@ -70,6 +70,21 @@ app.post('/Contactos', async (req, res) => {
        if(err) return next(err);
        res.redirect('./Contactos');
    });
+});
+
+app.post('/Ordernar_Online', async (req,res) => {
+    const customer = await stripe.customers.create({
+        email: req.body.stripeEmail,
+        source: req.body.stripeToken
+    });
+    const charge = await stripe.charges.create({
+        amount: '1400',
+        currency:'usd',
+        customer:customer.id,
+        description: 'Pasteles'
+    });
+    res.redirect('./Home');
+
 });
 
 module.exports = app;

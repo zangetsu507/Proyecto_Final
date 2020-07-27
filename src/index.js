@@ -5,7 +5,7 @@ const passport = require('passport');
 const session = require('express-session');
 const flash = require('connect-flash');
 const bodyParser = require('body-parser');
-const multer = require('multer');
+const nodemailer = require('nodemailer');
 
 //Inicializaciones
 const app = express();
@@ -20,7 +20,7 @@ app.set('view engine', 'ejs');
 
 //Middlewares
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: false}));
 app.use(session({
@@ -38,7 +38,6 @@ app.use((req, res, next) => {
     app.locals.user = req.user;
     next();
 });
-
 //Archivos estaticos
 app.use(express.static(path.join(__dirname,'public')));
 

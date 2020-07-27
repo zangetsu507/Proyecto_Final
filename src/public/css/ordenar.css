@@ -1,11 +1,38 @@
 .mno{
+    padding-top: 10px;
     margin: 0px;
+    margin-bottom: 5px;
 }
 
 .btno{
     width: 200px;
     height: 40px;
     color:white;
-    background:#68391A; ;
+    background:#68391A;
     border-style: none;
+}
+
+.cb{
+    text-align: center;
+}
+
+.card{
+    padding: 2px;
+    margin-top: 10px;
+}
+
+.card-footer button{
+    background:#68391A;
+}
+
+.card-footer button:hover{
+    background:#68391A;
+}
+
+.car-body{
+    padding-top: 5px;
+}
+
+.sprd{
+    margin: 15px;
 }

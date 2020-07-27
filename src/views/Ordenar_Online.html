@@ -13,43 +13,175 @@
     <div class="container-fluid">
         <div class="cm">
             <div class="row">
-                <div class="col-md-8">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="mno">
-                                <h4 class="text-center">Menu</h4>
-                                <img src="/img/choco.jpg" width="200" height="2" />
-                                <h4 class="text-center">Pasteles</h4>
-                            </div>
-                        </div>
+                <div class="col-md-12">
+                    <div class="mno">
+                        <h5 class="text-center">Menu</h5>
+                        <img src="/img/choco.jpg" width="200" height="2" />
+                        <h5 class="text-center">Pasteles</h5>
                     </div>
-                    <div class="row">
-                        <% products.forEach(function(productos) { %>
-                            <div class="card">
-                            <ul>
-                                <li><img src="<%= productos.imagen %>"></li>
-                                <li><%= productos.product_name %></li>
-                                <li><%= productos.descripcion %></li>
-                                <li><%= productos.precio %></li>
-                            </ul>
-                            </div>
-                        <% }) %>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="row">
-                        <div class="col-md-12">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
-                        </div>
-                    </div>
-                    <button class="btno">Ordenar ahora</button>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-4 mx-auto">
+                    <div class="card">
+                        <img src="img/cho_fresa.jpg" class="card-img-top" width="100" height="150" />
+                        <div class="car-body">
+                            <h5 class="cb" >14 $</h5>
+                            <p class="cb"><strong>Pastel de Chocolate</strong></p>
+                            <p class="cb"><small>Pastel de chocolate con fresas</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <form action="/Ordernar_Online" method="POST">
+                                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                data-key="pk_test_51H9Le7KaGC0LxOgTVSUD7NwDAPdglt5j4vvNQxnSISFQ3AtxoW5mFQ9hcRdVBHqc9Xpx0vcAGdmkPOeLxHsomr7n00SgZZhdNm"
+                                data-amount="1400"
+                                data-name="Candy Curner"
+                                data-description="Pastel de chocolate"
+                                data-image="/img/candycorner.png"
+                                data-locale="auto">
+                                </script>
+                                <script>
+                                    document.getElementsByClassName('stripe-button-el')[0].style.display = 'none';
+                                </script>
+                                <button class="btn btn-dark btn btn-block ">Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mx-auto">
+                    <div class="card">
+                        <img src="img/fresas.png" class="card-img-top" width="100" height="150" />
+                        <div class="car-body">
+                            <h5 class="cb">14 $</h5>
+                            <p class="cb"><strong>Pastel de Fresas</strong></p>
+                            <p class="cb"><small>Pastel de fresa con vainilla</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <form action="/Ordernar_Online" method="POST">
+                                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                data-key="pk_test_51H9Le7KaGC0LxOgTVSUD7NwDAPdglt5j4vvNQxnSISFQ3AtxoW5mFQ9hcRdVBHqc9Xpx0vcAGdmkPOeLxHsomr7n00SgZZhdNm"
+                                data-amount="1400"
+                                data-name="Candy Curner"
+                                data-description="Pastel de fresa"
+                                data-image="/img/candycorner.png"
+                                data-locale="auto">
+                                </script>
+                                <script>
+                                    document.getElementsByClassName('stripe-button-el')[1].style.display = 'none';
+                                </script>
+                                <button class="btn btn-dark btn btn-block ">Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mx-auto">
+                    <div class="card">
+                        <img src="img/frutas.png" class="card-img-top" width="100" height="150" />
+                        <div class="car-body">
+                            <h5 class="cb">14 $</h5>
+                            <p class="cb"><strong>Pastel de Frutas</strong></p>
+                            <p class="cb"><small>Pastel de vainilla con frutas</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <form action="/Ordernar_Online" method="POST">
+                                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                data-key="pk_test_51H9Le7KaGC0LxOgTVSUD7NwDAPdglt5j4vvNQxnSISFQ3AtxoW5mFQ9hcRdVBHqc9Xpx0vcAGdmkPOeLxHsomr7n00SgZZhdNm"
+                                data-amount="1400"
+                                data-name="Candy Curner"
+                                data-description="Pastel de Frutas"
+                                data-image="/img/candycorner.png"
+                                data-locale="auto">
+                                </script>
+                                <script>
+                                    document.getElementsByClassName('stripe-button-el')[2].style.display = 'none';
+                                </script>
+                                <button class="btn btn-dark btn btn-block ">Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mx-auto">
+                    <div class="card">
+                        <img src="img/nueces.png" class="card-img-top" width="100" height="150" />
+                        <div class="car-body">
+                            <h5 class="cb">14 $</h5>
+                            <p class="cb"><strong>Pastel de Nueces</strong></p>
+                            <p class="cb"><small>Pastel de nueces con chocolate</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <form action="/Ordernar_Online" method="POST">
+                                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                data-key="pk_test_51H9Le7KaGC0LxOgTVSUD7NwDAPdglt5j4vvNQxnSISFQ3AtxoW5mFQ9hcRdVBHqc9Xpx0vcAGdmkPOeLxHsomr7n00SgZZhdNm"
+                                data-amount="1400"
+                                data-name="Candy Curner"
+                                data-description="Pastel de Nueces"
+                                data-image="/img/candycorner.png"
+                                data-locale="auto">
+                                </script>
+                                <script>
+                                    document.getElementsByClassName('stripe-button-el')[3].style.display = 'none';
+                                </script>
+                                <button class="btn btn-dark btn btn-block ">Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mx-auto">
+                    <div class="card">
+                        <img src="img/tresleches.png" class="card-img-top" width="100" height="150" />
+                        <div class="car-body">
+                            <h5 class="cb">14 $</h5>
+                            <p class="cb"><strong>Pastel de Tres Leches</strong></p>
+                            <p class="cb"><small>Pastel de tres leches con toping de vainilla</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <form action="/Ordernar_Online" method="POST">
+                                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                data-key="pk_test_51H9Le7KaGC0LxOgTVSUD7NwDAPdglt5j4vvNQxnSISFQ3AtxoW5mFQ9hcRdVBHqc9Xpx0vcAGdmkPOeLxHsomr7n00SgZZhdNm"
+                                data-amount="1400"
+                                data-name="Candy Curner"
+                                data-description="Pastel de Tres Leches"
+                                data-image="/img/candycorner.png"
+                                data-locale="auto">
+                                </script>
+                                <script>
+                                    document.getElementsByClassName('stripe-button-el')[4].style.display = 'none';
+                                </script>
+                                <button class="btn btn-dark btn btn-block ">Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mx-auto">
+                    <div class="card">
+                        <img src="img/vainilla.png" class="card-img-top" width="100" height="150" />
+                        <div class="car-body">
+                            <h5 class="cb">14 $</h5>
+                            <p class="cb"><strong>Pastel de Vainilla</strong></p>
+                            <p class="cb"><small>Pastel de vainilla de tres pisos</small></p>
+                        </div>
+                        <div class="card-footer">
+                            <form action="/Ordernar_Online" method="POST">
+                                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                data-key="pk_test_51H9Le7KaGC0LxOgTVSUD7NwDAPdglt5j4vvNQxnSISFQ3AtxoW5mFQ9hcRdVBHqc9Xpx0vcAGdmkPOeLxHsomr7n00SgZZhdNm"
+                                data-amount="1400"
+                                data-name="Candy Curner"
+                                data-description="Pastel de Vainilla"
+                                data-image="/img/candycorner.png"
+                                data-locale="auto">
+                                </script>
+                                <script>
+                                    document.getElementsByClassName('stripe-button-el')[5].style.display = 'none';
+                                </script>
+                                <button class="btn btn-dark btn btn-block ">Comprar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="sprd"></div>
+            </div>
+
         </div>
-    </div>
     </div>
     <%- include ('navegador/footer.html') %>
 </body>
