@@ -1,7 +1,7 @@
 <div class="col-md-12">
 <div class="logomain">
 <div class="logo">
-  <img src="/img/candy_corner.jpg" alt="Logo" width=350 height=100 />
+  <a href="/Home"><img src="/img/candy_corner.jpg" alt="Logo" width=350 height=100/></a>
 </div>
 </div>
 
@@ -11,10 +11,10 @@
       <img src="/img/desplegable.png" width=30 height=30>
       <div>
         <% if (user) {%>
-          <a href="/logout">Log out</a>&nbsp;
+          <a href="/logout" class="navbar2">Log out</a>&nbsp;
         <%} else {%>
-        <a href="/Iniciar_sesion">Sign In</a>&nbsp;
-        <a href="/Crear_cuenta"> Sign Up</a>
+        <a href="/Iniciar_sesion"class="navbar2">Sign In</a>&nbsp;
+        <a href="/Crear_cuenta"class="navbar2"> Sign Up</a>
         <% } %>
       </div>
     </div>

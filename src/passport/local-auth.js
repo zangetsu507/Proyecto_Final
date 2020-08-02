@@ -4,6 +4,7 @@ const localStrategy = require('passport-local').Strategy;
 const User = require('../models/user');
 const user = require('../models/user');
 const contact = require('../models/contactos');
+const { getMaxListeners } = require('../models/contactos');
 
 passport.serializeUser((user,done) => {
     done(null,user.id);
@@ -47,5 +48,6 @@ passport.use('local-signin', new localStrategy({
         return done(null, false, req.flash('signinMessage','Contraseña inconrrecta'));
     }
     done(null,user);
+    
 
 }));

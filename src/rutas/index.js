@@ -3,7 +3,8 @@ const app = express.Router();
 const passport = require('passport');
 
 const Contactos = require('../models/contactos');
-const Product = require('../models/productos');
+const Pedidos = require('../models/pedidos');
+
 
 
 const stripe = require('stripe')('sk_test_51H9Le7KaGC0LxOgTl3IWK99MuaXjYFWaWQ64eEjsvU6QHjuHz7tWpeDx6QYm5y10FG7JdODnGGEu3jpC7VcKelF900lGKKJ06R');
@@ -21,7 +22,7 @@ app.get('/Menu', (req, res) => {
 });
 
 app.get('/Ordenar_Online', isAuthenticated,async (req, res) => {
-    res.redirect('./Iniciar_Sesion', {title:"Ordenar Online"});
+    res.render('Ordenar_Online.html', {title:"Ordenar Online"});
 });
 
 app.get('/Sucursales', (req, res) => {
@@ -83,7 +84,16 @@ app.post('/Ordernar_Online', async (req,res) => {
         customer:customer.id,
         description: 'Pasteles'
     });
-    res.redirect('./Home');
+
+    const pedidos = new Pedidos();
+    pedidos.email = req.body.stripeEmail;
+    pedidos.cod_compra = req.body.stripeToken;
+    pedidos.unidad = 1;
+    pedidos.precio = 14;
+    await pedidos.save(err => {
+       if(err) return next(err);
+       res.redirect('./Home');
+   });
 
 });
 
